@@ -2,7 +2,7 @@
 The aim of the 'Interactive Frontend Development' end of module project was to create a interactive data dashboard on a dataset of choice using D3.js and dc.js. The webiste should reflect all of the skills gained in; HTML,CSS, JavaScript/JQuery and use of D3 and dc. The website is a showcase of a a fictious dataset examining student exam peformamce based on ; gener, ethnic race, parental level of education, test preparation and scores in ; Maths, Reading and Writing.
 
  The website is an interactive data dashboard which incorporates the following fields; gender, parental education, ethnic race, maths, reading and writing scores. The dataset dashboard will use interactive graphs to show teh relationship between these fields in order for the user to extrapolate data.
-<hr>
+
 
 ## User Experience
 The website aims to inform users of the trends between gender, ethnic race, parental level of education, maths, reading and writing scores. The website includes a navigation bar where users can navigate to each graph and a reset button at the end where users can reset the graphs in order to select the fields they requrie. All teh charts will render according to the field chosen.
@@ -15,7 +15,7 @@ The website aims to inform users of the trends between gender, ethnic race, pare
 <li> As a user I would like to examine whether there is a link between test preparation and scores gained in; Maths, Reading and Writing Exams.  </li>
 
 </ul>
-<hr>
+
 ## Wireframes
 
 My wireframes for the project were created using Justinmind Prototyper 8.6.1. The wireframes are saved as a pdf file. Each wireframe contains three mock-ups which include; desktops and for responsive design; tablets and mobiles.
@@ -23,7 +23,7 @@ My wireframes for the project were created using Justinmind Prototyper 8.6.1. Th
 [Desktop Wireframe](/assets/wireframes/desktop.png)
 [Tablet Wireframe](/assets/wireframes/tablet.png)
 [Mobile Wireframe](/assets/wireframes/mobile.png)
-<hr>
+
 
 
 
@@ -42,7 +42,7 @@ The website is a single website which contains a navigation bar to navigation us
 <ul>
 <li> The charts could include data on school meals to depict the correlation between school meals (free/reduced and standard) against examination score as a indication of economic status and examination performance. </li>
 </ul>
-<hr>
+
 ## Technologies used
 
 <ul>
@@ -56,12 +56,12 @@ The website is a single website which contains a navigation bar to navigation us
 <li><a href="https://d3js.org/"></a>D3<li>D3 was used to produce the charts.
 <li><a href="https://dc-js.github.io/dc.js/"></a>dc<li>dc was used to produce interative chart.
 </ul>
-<hr>
+
 ## Framework 
 <ul>
 <li><a href="https://getbootstrap.com/"> Bootstrap v4.2 </a> </li>  The Bootstrap framework is used to style the webpage alongside custom css and the grid system is adhered to.
 </ul>
-<hr>
+
 ## Testing and Validating
 
 The HTML and CSS3 codes were validated on WSC validator and no syntax errors were found. The website was tested at various screen sizes which include mobile and tablet devices.  The Javascript code was tested using the console ar various intervals and using Jasmine to examine whether the function tests pass. 
@@ -96,18 +96,18 @@ The website was tested on the following devices and the website was found to dis
 ## Testing User Stories
 
 A potential user/user who  wishes to examine correlation in exam performation the data dshboard allows correlation to be seen between gender and test results, parental level of education acorrding to ethnicity, whether consistent performance exists throughout subjects based on results and a correlation between test preparation and scores. The user is able to conclude whether correlation exists between these data series across the testing areas of ; maths, reading and writing.
-<hr>
+
 ## Deployment
 
 The site was deployed on GitHub.
-<hr>
+
    
 ## Credits
 
 ## Content
 
 The basic design for Dashboard Data project was taken from The Code Institute's [Mini Data Visulaisation Project](https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+IFD101+2017_T3/courseware/d8b66a1ffdb7442d9a83a64da3677dd3/91e01ded232a482a8c4729190f1d3839/?activate_block_id=block-v1%3ACodeInstitute%2BIFD101%2B2017_T3%2Btype%40sequential%2Bblock%4091e01ded232a482a8c4729190f1d3839)
-<hr>
+
 ## Media
 
 
@@ -119,12 +119,12 @@ The background image was taken from [Photo by Element5 Digital on Unsplash](http
 
 
 
-<hr>
+
 #### Dataset
 
 The dataset for this project was  fictious examination performance datset downloaded as a csv file from [Kaggle](https://www.kaggle.com/spscientist/students-performance-in-exams).
 Th dataset was created by the 'SP Scientist' and is 
-<hr>
+
 
 ## Acknowledgements
 
