@@ -5,8 +5,9 @@ queue()
 function makeGraphs(error, studentData) {
     var ndx = crossfilter(studentData);
 
-/*Each Chart Function*/
+    /*Each Chart Function*/
     show_gender_balance(ndx);
+    show_test_scores_by_gender(ndx);
 
 
     dc.renderAll();
@@ -14,23 +15,74 @@ function makeGraphs(error, studentData) {
 
 }
 
+
+var genderDim = ndx.dimension(dc.pluck("gender"));
+
 /*Gender Balance Chart*/
 
 function show_gender_balance(ndx) {
-    var dim = ndx.dimension(dc.pluck('gender'));
-    var group = dim.group();
+    var genderColors = d3.scale.ordinal()
+        .domain(["Female", "Male"])
+        .range(["red", "blue"]);
+    var genderDim = ndx.dimension(function(d) {
+        return [d.gender];
+    });
+    var genderMix = genderDim.group();
 
     dc.barChart("#gender-balance")
-        .width(400)
-        .height(300)
+        .width(350)
+        .height(250)
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
-        .dimension(dim)
-        .group(group)
+        .colorAccessor(function(d) { return d.key[0]; })
+        .colors(genderColors)
+        .dimension(genderDim)
+        .group(genderMix)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .elasticY(true)
         .xAxisLabel("Gender")
-        .yAxisLabel("Number of People")
         .yAxis().ticks(20);
 }
 
+/*Subject specific pie charts for genders*/
+
+function show_test_scores_by_gender(ndx) {
+    var genderColors = d3.scale.ordinal()
+        .domain(["Female", "Male"])
+        .range(["blue", "red"]);
+    var genderDim = ndx.dimension(function(d) {
+        return [d.gender];
+    });
+    var math_score_by_gender = genderDim.group().reduceSum(dc.pluck('math_score'));
+    var reading_score_by_gender = genderDim.group().reduceSum(dc.pluck('reading_score'));
+    var writing_score_by_gender = genderDim.group().reduceSum(dc.pluck('writing_score'));
+
+    dc.pieChart("#gender-balance-math")
+        .height(100)
+        .radius(75)
+        .transitionDuration(500)
+        .colorAccessor(function(d) { return d.key[0]; })
+        .colors(genderColors)
+        .dimension(genderDim)
+        .group(math_score_by_gender)
+
+    dc.pieChart("#gender-balance-reading")
+        .height(100)
+        .radius(75)
+        .transitionDuration(500)
+        .colorAccessor(function(d) { return d.key[0]; })
+        .colors(genderColors)
+        .dimension(genderDim)
+        .group(reading_score_by_gender)
+
+    dc.pieChart("#gender-balance-writing")
+        .height(100)
+        .radius(75)
+        .transitionDuration(500)
+        .colorAccessor(function(d) { return d.key[0]; })
+        .colors(genderColors)
+        .dimension(genderDim)
+        .group(writing_score_by_gender)
+
+}
