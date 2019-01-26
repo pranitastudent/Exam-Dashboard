@@ -16,8 +16,6 @@ function makeGraphs(error, studentData) {
 }
 
 
-var genderDim = ndx.dimension(dc.pluck("gender"));
-
 /*Gender Balance Chart*/
 
 function show_gender_balance(ndx) {
@@ -42,6 +40,7 @@ function show_gender_balance(ndx) {
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Gender")
+        .yAxisLabel("Number of Students")
         .yAxis().ticks(20);
 }
 
@@ -59,8 +58,8 @@ function show_test_scores_by_gender(ndx) {
     var writing_score_by_gender = genderDim.group().reduceSum(dc.pluck('writing_score'));
 
     dc.pieChart("#gender-balance-math")
-        .height(100)
-        .radius(75)
+        .height(200)
+        .radius(90)
         .transitionDuration(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(genderColors)
@@ -68,8 +67,8 @@ function show_test_scores_by_gender(ndx) {
         .group(math_score_by_gender)
 
     dc.pieChart("#gender-balance-reading")
-        .height(100)
-        .radius(75)
+        .height(200)
+        .radius(90)
         .transitionDuration(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(genderColors)
@@ -77,8 +76,8 @@ function show_test_scores_by_gender(ndx) {
         .group(reading_score_by_gender)
 
     dc.pieChart("#gender-balance-writing")
-        .height(100)
-        .radius(75)
+        .height(200)
+        .radius(90)
         .transitionDuration(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(genderColors)

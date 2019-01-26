@@ -115,7 +115,7 @@ The basic design for Dashboard Data project was taken from The Code Institute's 
 
 The Logo was taken from [Open Clip Art- Good Grade](https://openclipart.org/detail/191354/good-grade).
 
-The background image was taken from [Photo by Element5 Digital on Unsplash](https://unsplash.com/photos/OyCl7Y4y0Bkk).
+The background image was taken from [Photo by Element5 Digital on Unsplash](https://unsplash.com/photos/OyCl7Y4y0Bk).
 
 
 

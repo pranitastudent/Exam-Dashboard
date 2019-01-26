@@ -30,101 +30,97 @@
 
 <body>
 
-    <!--Navbar-->
+    <!-- Main Image and Navbar-->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Exam Performance</a>
+                <a class="navbar-brand" href="#"><strong>Exam Performance Data Dashboard</strong></a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Gender Balance Examination</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Subject Specific Examination
-        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Math</a></li>
-                        <li><a href="#">Reading</a></li>
-                        <li><a href="#">Writing</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Ethnicity and Parental Education</a></li>
-                <li><a href="#">Test Preparation</a></li>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="active" "nav-title"><a href="#genderbar">Gender Balance Examination</a></li>
+                <li class="nav-title"><a href="#subject">Subject Specific Examination</a></li>
+                <li class="nav-title"><a href="#ethnicity">Ethnicity and Parental Education</a></li>
+                <li class="nav-title"><a href="#preparation">Test Preparation</a></li>
             </ul>
         </div>
     </nav>
+     <!--Nav Bar Ends-->
 
-    <!--Nav Bar Ends-->
+        <div class="container-fluid" id="main-image">
+        <main>
+            <!--Gender Balance Bar Chart-->
+            <section id="genderbar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <h2 class="section-heading"><strong>Gender Balance Examination</strong></h2>
 
-
-    <main>
-        <!--Gender Balance Bar Chart-->
-        <section class="section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 text-center">
-                        <h2 class="gender-heading"><strong>Gender Balance Examination</strong></h2>
-
-                    </div>
-                    <div class="col-xs-12 col-sm-6 text-center">
-                        <p class="gender-paragraph"><span id="female-number"></span> 518 students in the study are female.</p>
-                        <p class="gender-paragraph"><span id="male-number"></span> 482 students in the study are male.</p>
-                        <p class="gender-paragraph">We can see that there is an almost 50/50 split betweeen the genders in our examination study with a total number of 1000 students.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 text-center" id="gender-balance" class="custom-chart"></div>
-                </div>
-            </div>
-        </section>
-
-        <!--Gender Specific Pie Charts-->
-
-        <section class="section">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 text-center">
-                        <h2 class="section-heading"><strong>Subject Specfic Examination</strong></h2>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 text-center">
+                            <p class="gender-paragraph"><span id="female-number"></span> 518 students in the study are female.</p>
+                            <p class="gender-paragraph"><span id="male-number"></span> 482 students in the study are male.</p>
+                            <p class="gender-paragraph">We can see that there is an almost 50/50 split betweeen the genders in our examination study with a total number of 1000 students.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 text-center" id="gender-balance" class="custom-chart"></div>
                     </div>
                 </div>
+            </section>
+            
 
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 text-center">
-                        <div class="row">
-                            <p class="section-paragraph"><strong>Math</strong></p>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 text-center" id="gender-balance-math" class="custom-chart"></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 text-center">
-                        <div class="row">
-                            <p class="section-paragraph"><strong>Reading</strong></p>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 text-center" id="gender-balance-reading" class="custom-chart"></div>
+            <!--Gender Specific Pie Charts-->
+
+            <section id="subject">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <h2 class="section-heading"><strong>Subject Specfic Examination</strong></h2>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 text-center">
-                        <div class="row">
-                            <p class="section-paragraph"><strong>Writing</strong></p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <div class="row">
+                                <p class="section-paragraph"><strong>Math</strong></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-center" id="gender-balance-math" class="custom-chart"></div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 text-center" id="gender-balance-writing" class="custom-chart"></div>
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <div class="row">
+                                <p class="section-paragraph"><strong>Reading</strong></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-center" id="gender-balance-reading" class="custom-chart"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12">
-                        <p class="section-paragraph">Data Analysis reveals that roughly males and females perfoming equally in Math at first galance but there is a marginal difference with males outperforming females (likely to be due to the more females than males in the study). Females outperform Males in both reading and writing.</h2>
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <div class="row">
+                                <p class="section-paragraph"><strong>Writing</strong></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-center" id="gender-balance-writing" class="custom-chart"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12">
+                            <p class="section-paragraph">Data Analysis reveals that roughly males and females perfoming equally in Math at first galance but there is a marginal difference with males outperforming females (likely to be due to the more females than males in the study).
+                                Females outperform Males in both reading and writing.</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+<div>
+
+
+        <!--JQuery for drop down navigation bar-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
 
-
-    <!--JQuery for drop down navigation bar->-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

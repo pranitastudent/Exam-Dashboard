@@ -1,14 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500');
+
+
 /*Headings*/
 
 .gender-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size:2em;
     margin:auto;
 }
+
+/*Images*/
+
+#main-image{
+    margin:0;
+    padding: 0;
+    background-image: url('/assets/images/exam.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
 
 /*Paragraphs*/
 
 .gender-paragraph {
+    font-family: 'Roboto', sans-serif;
+    color:#364572;
+    font-size:1.5em;
     padding-top: 1em;
+    font-weight:500;
 }
+
+.section-paragraph {
+    font-family: 'Roboto', sans-serif;
+    color:#36454f;
+    font-size:1.5em;
+    padding-top: 1em;
+    font-weight:400;
+   }
+
+
+/*Navigation bar*/
+
+.navbar-inverse .navbar-brand {
+    font-size:1.5em;
+    color:#ffffff;
+    margin:0;
+}
+
+.navbar-inverse {
+    margin:0;
+}
+
+
+.nav-title {
+    font-family: 'Roboto', sans-serif;
+    font-size:1em;
+    
+}
+
+
 
 /*Background Color*/
 
