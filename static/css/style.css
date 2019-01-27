@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500');
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
 
 /*Headings*/
 
@@ -12,7 +22,7 @@
 /*Images*/
 
 #main-image{
-    margin:0;
+   margin:0;
     padding: 0;
     background-image: url('/assets/images/exam.jpg');
     background-repeat: no-repeat;
@@ -62,7 +72,21 @@
     
 }
 
+/*Footer*/
+
+#main-footer {
+    background-color:#000000;
+    height:10vh;
+}
 
 
-/*Background Color*/
 
+/*Media Queries*/
+
+/*Images media queries*/
+
+@media(min-width:768px){
+    #main-image {
+        height:100vh;
+    }
+}

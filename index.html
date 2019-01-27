@@ -31,12 +31,12 @@
 <body>
 
     <!-- Main Image and Navbar-->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse cf">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><strong>Exam Performance Data Dashboard</strong></a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right cf">
 
                 <li class="active" "nav-title"><a href="#genderbar">Gender Balance Examination</a></li>
                 <li class="nav-title"><a href="#subject">Subject Specific Examination</a></li>
@@ -50,7 +50,7 @@
         <div class="container-fluid" id="main-image">
         <main>
             <!--Gender Balance Bar Chart-->
-            <section id="genderbar">
+            <section id="genderbar" class="section">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 text-center">
@@ -70,12 +70,12 @@
 
             <!--Gender Specific Pie Charts-->
 
-            <section id="subject">
+            <section id="subject" class="section">
                 <div class="container">
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 text-center">
-                            <h2 class="section-heading"><strong>Subject Specfic Examination</strong></h2>
+                            <h2 class="section-heading"><strong>Subject Specific Examination</strong></h2>
                         </div>
                     </div>
 
@@ -112,12 +112,20 @@
                 </div>
             </section>
         </main>
+        
+        
+        <footer id= "main-footer">
+            
+        </footer>
 <div>
 
 
         <!--JQuery for drop down navigation bar-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <!--Own JS-->
+        <script type="text/javascript" src="static/js/main.js"></script>
 
 
 
