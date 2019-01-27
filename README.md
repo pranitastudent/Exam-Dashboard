@@ -20,9 +20,9 @@ The website aims to inform users of the trends between gender, ethnic race, pare
 
 My wireframes for the project were created using Justinmind Prototyper 8.6.1. The wireframes are saved as a pdf file. Each wireframe contains three mock-ups which include; desktops and for responsive design; tablets and mobiles.
 
-[Desktop Wireframe](/assets/wireframes/desktop.png)
-[Tablet Wireframe](/assets/wireframes/tablet.png)
-[Mobile Wireframe](/assets/wireframes/mobile.png)
+[Desktop Wireframe](wireframes/desktop.png)
+[Tablet Wireframe](wireframes/tablet.png)
+[Mobile Wireframe](wireframes/mobile.png)
 
 
 
