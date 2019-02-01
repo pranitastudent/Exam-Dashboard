@@ -117,6 +117,9 @@ The Logo was taken from [Open Clip Art- Good Grade](https://openclipart.org/deta
 
 The background image was taken from [Photo by Element5 Digital on Unsplash](https://unsplash.com/photos/OyCl7Y4y0Bk).
 
+### Fading Image
+
+Image faded using [Fade-out Effect] (https://www.tuxpi.com/photo-effects/fade-image).
 
 
 
