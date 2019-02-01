@@ -22,6 +22,10 @@ function makeGraphs(error, studentData) {
     show_math_score_to_reading_score_correlation(ndx);
     show_math_score_to_writing_score_correlation(ndx);
     show_reading_score_to_writing_score_correlation(ndx);
+    show_math_scores_by_test_prep(ndx);
+    show_reading_scores_by_test_prep(ndx);
+    show_writing_scores_by_test_prep(ndx);
+
 
 
     dc.renderAll();
@@ -298,4 +302,143 @@ function show_reading_score_to_writing_score_correlation(ndx) {
         .dimension(scoresDim)
         .group(scoresGroup)
         .margins({ top: 10, right: 50, bottom: 75, left: 75 });
+}
+
+/*Line charts for text preparation vs average scores in each subject*/
+
+
+/*Line Graph for math scores by test prep*/
+function show_math_scores_by_test_prep(ndx) {
+    var testDim = ndx.dimension(dc.pluck("test_preparation_course"));
+    var math_by_test_prepGroup = testDim.group().reduce(
+        function(p, v) {
+            p.count++;
+            p.total += v.math_score;
+            p.average = p.total / p.count;
+            return p;
+        },
+        function(p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            }
+            else {
+                p.total -= v.math_score;
+                p.average = p.total / p.count;
+            }
+            return p;
+        },
+        function() {
+            return { count: 0, total: 0, average: 0 };
+        }
+    );
+
+
+    dc.lineChart("#math-test-prep-chart")
+        .width(350)
+        .height(250)
+        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .dimension(testDim)
+        .group(math_by_test_prepGroup)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .valueAccessor(function(d) {
+            return d.value.average;
+        })
+        .elasticY(true)
+        .xAxisLabel("Test Prep Course")
+        .yAxisLabel("Average Math Score")
+        .yAxis().ticks(10)
+}
+
+/*Line Graph for reading scores by test prep*/
+function show_reading_scores_by_test_prep(ndx) {
+    var testDim = ndx.dimension(dc.pluck("test_preparation_course"));
+    var reading_by_test_prepGroup = testDim.group().reduce(
+        function(p, v) {
+            p.count++;
+            p.total += v.reading_score;
+            p.average = p.total / p.count;
+            return p;
+        },
+        function(p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            }
+            else {
+                p.total -= v.reading_score;
+                p.average = p.total / p.count;
+            }
+            return p;
+        },
+        function() {
+            return { count: 0, total: 0, average: 0 };
+        }
+    );
+
+    dc.lineChart("#reading-test-prep-chart")
+        .width(350)
+        .height(250)
+        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .dimension(testDim)
+        .group(reading_by_test_prepGroup)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .valueAccessor(function(d) {
+            return d.value.average;
+        })
+        .elasticY(true)
+        .xAxisLabel("Test Prep Course")
+        .yAxisLabel("Average Reading Score")
+        .yAxis().ticks(10);
+}
+
+/*Line Graph for writing scores by test prep*/
+function show_writing_scores_by_test_prep(ndx) {
+    var testDim = ndx.dimension(dc.pluck("test_preparation_course"));
+    var writing_by_test_prepGroup = testDim.group().reduce(
+        function(p, v) {
+            p.count++;
+            p.total += v.writing_score;
+            p.average = p.total / p.count;
+            return p;
+        },
+        function(p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            }
+            else {
+                p.total -= v.writing_score;
+                p.average = p.total / p.count;
+            }
+            return p;
+        },
+        function() {
+            return { count: 0, total: 0, average: 0 };
+        }
+    );
+
+    dc.lineChart("#writing-test-prep-chart")
+        .width(350)
+        .height(250)
+        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .dimension(testDim)
+        .group(writing_by_test_prepGroup)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .valueAccessor(function(d) {
+            return d.value.average;
+        })
+        .elasticY(true)
+        .xAxisLabel("Test Prep Course")
+        .yAxisLabel("Average Writing Score")
+        .yAxis().ticks(10);
 }

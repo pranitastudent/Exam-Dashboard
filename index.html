@@ -34,8 +34,15 @@
     <nav class="navbar navbar-inverse cf">
         <div class="container-fluid">
             <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#"><strong>Exam Performance Data Dashboard</strong></a>
             </div>
+              <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="nav navbar-nav navbar-right cf">
 
                 <li class="active" "nav-title"><a href="#genderbar">Gender Balance Examination</a></li>
@@ -156,8 +163,35 @@
             </div>
         </div>
     </section>
+                   
                     
-                    
+    <!--Test Preparation Graphs-->   
+    
+    
+    <!-- Test prep: completed vs not completed - Line graphs -->
+    <section id="preparation" class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 text-center">
+            <h1 class="section-heading">Did students who completed the test preparation course gain more marks on avarage in each subject?</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 text-center" id="test-prep-selector" class="custom-chart"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="math-test-prep-chart" class="custom-chart"></div>
+          <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="reading-test-prep-chart" class="custom-chart"></div>
+          <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="writing-test-prep-chart" class="custom-chart"></div>
+          <div class="col-xs-12 col-sm-6 col-md-12">
+            <p class="section-paragraph">We can see here that students who completed the test preparation course did marginally better in all subjects than those who did not complete the course.</p>
+          </div>
+        </div>
+
+      </div>
+</section>
                         
         </main>
 

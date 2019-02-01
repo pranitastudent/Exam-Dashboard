@@ -95,3 +95,13 @@ body {
 }
 
 
+/*Media Queries*/
+
+@media(max-width:767px){
+.navbar-inverse .navbar-brand {
+ padding:0 10px;
+ line-height: 1.2em;    
+
+    }
+}
+
