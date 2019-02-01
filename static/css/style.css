@@ -25,14 +25,12 @@ body {
 
 /*Graphs*/
 
-
-
 /*Images*/
 
 #main-image {
-    width:100%;
+    width: 100%;
     height: auto;
-    position:relative;
+    position: relative;
     margin: 0;
     padding: 0;
     background-image: url('../images/exam2.jpg');
@@ -83,8 +81,8 @@ body {
 
 }
 
-#parental_level_of_education-selector{
-    display:flex;
+#parental_level_of_education-selector {
+    display: flex;
 }
 
 /*Footer*/
@@ -97,11 +95,10 @@ body {
 
 /*Media Queries*/
 
-@media(max-width:767px){
-.navbar-inverse .navbar-brand {
- padding:0 10px;
- line-height: 1.2em;    
+@media(max-width:767px) {
+    .navbar-inverse .navbar-brand {
+        padding: 0 10px;
+        line-height: 1.2em;
 
     }
 }
-
