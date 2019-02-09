@@ -22,8 +22,9 @@ $('.cf a').on('click', function(event) {
 
 $(document).ready(function() {
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 350) {
+        if ($(this).scrollTop() > 150) {
             $("#back-to-top").fadeIn();
+        
         }
         else {
             $("#back-to-top").fadeOut();
@@ -31,7 +32,8 @@ $(document).ready(function() {
     });
     // scroll body to 0px on click
     $("#back-to-top").click(function() {
-          $("body,html").animate({
+        $("#back-to-top").tooltip("hide");
+        $("body,html").animate({
                 scrollTop: 0
             },
             400
