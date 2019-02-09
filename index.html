@@ -56,14 +56,22 @@
     </nav>
     <!--Nav Bar Ends-->
 
+
     <div class="container" id="main-image">
-        <main>
+        <main id="wrapper">
             <!--Gender Balance Bar Chart-->
             <section id="genderbar" class="section">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 text-center">
                             <h2 class="section-heading"><strong>Gender Balance Examination</strong></h2>
+
+
+                            <!--Reset Button-->
+
+                            <div class="col-xs-12 col-md-12">
+                                <button class="btn btn-danger top-btn" onClick="reset();">Reset All</button>
+                            </div>
 
                         </div>
                         <div class="col-xs-12 col-sm-6 text-center">
@@ -75,7 +83,6 @@
                     </div>
                 </div>
             </section>
-
 
             <!--Gender Specific Pie Charts-->
 
@@ -91,26 +98,26 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 text-center">
                             <div class="row">
-                                <p class="section-paragraph"><strong>Math</strong></p>
+                                <p class="section-paragraph pie-heading"><strong>Math</strong></p>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 text-center" id="gender-balance-math" class="custom-chart"></div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 text-center">
-                            <div class="row">
-                                <p class="section-paragraph"><strong>Reading</strong></p>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 text-center" id="gender-balance-reading" class="custom-chart"></div>
+                                <div class="col-xs-12 col-sm-4 text-center" id="gender-balance-math" class="custom-chart"></div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 text-center">
                             <div class="row">
-                                <p class="section-paragraph"><strong>Writing</strong></p>
+                                <p class="section-paragraph pie-heading"><strong>Reading</strong></p>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 text-center" id="gender-balance-writing" class="custom-chart"></div>
+                                <div class="col-xs-12 col-sm-4 text-center" id="gender-balance-reading" class="custom-chart"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <div class="row">
+                                <p class="section-paragraph pie-heading"><strong>Writing</strong></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 text-center" id="gender-balance-writing" class="custom-chart"></div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12">
@@ -128,7 +135,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 text-center">
                             <h2 class="section-heading">Ethnicity and Parental Education Examination</h2>
-                                <p class="section-paragraph">Select a level of education to compare against the five ethnic groups in this study:</p>
+                            <p class="section-paragraph">Select a level of education to compare against the five ethnic groups in this study:</p>
                         </div>
                         <div>
                             <div class="col-xs-12 text-center" id="race_ethnicity-graph" class="custom chart"></div>
@@ -139,63 +146,72 @@
                             <p class="section-paragraph col-xs-12"><strong>From examination the various degree levels against ethnicity its appear Group D have the highest number of parents educated to masters degree level. Group A and E have the lowest educated degrees across parental level. Overall
                               Group C appears to have the best educated parents across all degrees.</strong></p>
                         </div>
-                    </section>    
+            </section>
 
-                        <!-- Subject comparsion correlation scatter plots -->
-
-
-                        <section id="correlation" class="section">
-                            <div class="container">
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 text-center">
-                                        <h2 class="section-heading">Is there any correlation between how students score in each subject?</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 visible-xs text-center" id="hidden-p">
-                                        <p class="section-paragraph">To view these graphs fully, please turn your device to landscape.</p>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6 text-center" id="math_vs_reading_scores" class="custom-chart"></div>
-                                    <div class="col-xs-12 col-md-6 text-center" id="math_vs_writing_scores" class="custom-chart"></div>
-                                    <div class="col-xs-12 col-md-6 text-center" id="reading_vs_writing_scores" class="custom-chart"></div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <p class="section-paragraph">The data reveals that students who perform well in one subject for example math, tend to perform well across the board.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+            <!-- Subject comparsion correlation scatter plots -->
 
 
-                        <!--Test Preparation Graphs-->
+            <section id="correlation" class="section">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <h2 class="section-heading">Is there any correlation between how students score in each subject?</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs text-center" id="hidden-p">
+                            <p class="section-paragraph">To view these graphs fully, please turn your device to landscape.</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-center" id="math_vs_reading_scores" class="custom-chart"></div>
+                        <div class="col-xs-12 col-md-6 text-center" id="math_vs_writing_scores" class="custom-chart"></div>
+                        <div class="col-xs-12 col-md-6 text-center" id="reading_vs_writing_scores" class="custom-chart"></div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="section-paragraph">The data reveals that students who perform well in one subject for example math, tend to perform well across the board.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-                        <!-- Test prep: completed vs not completed - Line graphs -->
-                        <section id="preparation" class="section">
-                            <div class="container">
+            <!--Test Preparation Graphs-->
 
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 text-center">
-                                        <h2 class="section-heading">Did students who completed the test preparation course gain more marks on avarage in each subject?</h2>
-                                    </div>
-                                </div>
 
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 text-center" id="test-prep-selector" class="custom-chart"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="math-test-prep-chart" class="custom-chart"></div>
-                                    <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="reading-test-prep-chart" class="custom-chart"></div>
-                                    <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="writing-test-prep-chart" class="custom-chart"></div>
-                                    <div class="col-xs-12 col-sm-6 col-md-12">
-                                        <p class="section-paragraph">We can see here that students who completed the test preparation course did marginally better in all subjects than those who did not complete the course.</p>
-                                    </div>
-                                </div>
+            <!-- Test prep: completed vs not completed - Line graphs -->
+            <section id="preparation" class="section">
+                <div class="container">
 
-                            </div>
-                        </section>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <h2 class="section-heading">Did students who completed the test preparation course gain more marks on avarage in each subject?</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center" id="test-prep-selector" class="custom-chart"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="math-test-prep-chart" class="custom-chart"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="reading-test-prep-chart" class="custom-chart"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 text-center" id="writing-test-prep-chart" class="custom-chart"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <p class="section-paragraph"> The data reveals students who completed the test preparation course did marginally better in all subjects than those who did not complete the course.</p>
+                        </div>
+                            <!--Back to the top button-->
+             
+                    <a href="#" id="back-to-top" class="btn-first btn-sm back-to-top" role="button" title="Back to Top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+           
+
+
+                    </div>
+
+                </div>
+               
+            </section>
+
         </main>
-
+        
+     
         <!--Footer-->
 
         <footer id="main-footer" class="row">

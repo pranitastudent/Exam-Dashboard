@@ -23,6 +23,7 @@ body {
     color: #000000;
 }
 
+
 /*Graphs*/
 
 /*Images*/
@@ -43,6 +44,46 @@ body {
 }
 
 
+/*Reset button*/
+
+button.btn.btn-danger.top-btn {
+	transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+button.btn.btn-danger.top-btn:hover {
+    border-color: #ffffff;
+	
+}
+
+button.btn.btn-danger {
+    background-color: #ff3333;
+    
+}
+
+
+/* Back to the top button*/
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  right:40px;
+  bottom:90px;
+  border: 0;
+  background-color: #002080;
+  color:#ffffff;
+}
+
+.btn-first:hover {
+  color:#ffffff;
+  background:#ff0000;
+}
+
+
+
+
 /*Paragraphs*/
 
 .gender-paragraph {
@@ -60,6 +101,7 @@ body {
     padding-top: 1em;
     font-weight: 400;
 }
+
 
 
 /*Navigation bar*/
@@ -89,16 +131,27 @@ body {
 
 #main-footer {
     background-color: #000000;
-    height: 10vh;
+
 }
+
 
 
 /*Media Queries*/
 
 @media(max-width:767px) {
     .navbar-inverse .navbar-brand {
-        padding: 0 10px;
+        margin-bottom: 20px;
+        padding: 0px 10px;
         line-height: 1.2em;
 
     }
 }
+
+
+@media(min-width:768px) {
+    .pie-heading {
+        padding-right: 7.5em;
+    }
+
+}
+

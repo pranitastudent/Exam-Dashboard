@@ -3,9 +3,12 @@ queue()
     .defer(d3.csv, "data/StudentsPerformance.csv")
     .await(makeGraphs);
 
+     sd = [];
 
 function makeGraphs(error, studentData) {
-    var ndx = crossfilter(studentData);
+    const ndx = crossfilter(studentData);
+    
+    sd = studentData;
 
     /*To change these strings to integer values*/
     studentData.forEach(function(d) {
@@ -29,6 +32,11 @@ function makeGraphs(error, studentData) {
 
 
     dc.renderAll();
+}
+
+/*Reset function which resets data when the button is pushed*/
+function reset() {
+    makeGraphs(null, sd);
 }
 
 
@@ -57,9 +65,9 @@ function show_percent_of_each_gender(ndx) {
         );
     }
 
-    var genderDim = ndx.dimension(dc.pluck("gender"));
-    var percentageThatAreFemale = percentageThatAreEachGender("female");
-    var percentgeThatAreMale = percentageThatAreEachGender("male");
+    const genderDim = ndx.dimension(dc.pluck("gender"));
+    const percentageThatAreFemale = percentageThatAreEachGender("female");
+    const percentgeThatAreMale = percentageThatAreEachGender("male");
 
     dc.numberDisplay("#female-number")
         .group(percentageThatAreFemale)    
@@ -309,8 +317,8 @@ function show_reading_score_to_writing_score_correlation(ndx) {
 
 /*Line Graph for math scores by test prep*/
 function show_math_scores_by_test_prep(ndx) {
-    var testDim = ndx.dimension(dc.pluck("test_preparation_course"));
-    var math_by_test_prepGroup = testDim.group().reduce(
+    const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
+    const math_by_test_prepGroup = testDim.group().reduce(
         function(p, v) {
             p.count++;
             p.total += v.math_score;
@@ -355,8 +363,8 @@ function show_math_scores_by_test_prep(ndx) {
 
 /*Line Graph for reading scores by test prep*/
 function show_reading_scores_by_test_prep(ndx) {
-    var testDim = ndx.dimension(dc.pluck("test_preparation_course"));
-    var reading_by_test_prepGroup = testDim.group().reduce(
+    const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
+    const reading_by_test_prepGroup = testDim.group().reduce(
         function(p, v) {
             p.count++;
             p.total += v.reading_score;
@@ -400,8 +408,8 @@ function show_reading_scores_by_test_prep(ndx) {
 
 /*Line Graph for writing scores by test prep*/
 function show_writing_scores_by_test_prep(ndx) {
-    var testDim = ndx.dimension(dc.pluck("test_preparation_course"));
-    var writing_by_test_prepGroup = testDim.group().reduce(
+    const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
+    const writing_by_test_prepGroup = testDim.group().reduce(
         function(p, v) {
             p.count++;
             p.total += v.writing_score;
