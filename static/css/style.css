@@ -47,7 +47,7 @@ body {
 /*Reset button*/
 
 button.btn.btn-danger.top-btn {
-	transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -55,30 +55,30 @@ button.btn.btn-danger.top-btn {
 
 button.btn.btn-danger.top-btn:hover {
     border-color: #ffffff;
-	
+
 }
 
 button.btn.btn-danger {
     background-color: #ff3333;
-    
+
 }
 
 
 /* Back to the top button*/
 
 .back-to-top {
-  cursor: pointer;
-  position: fixed;
-  right:40px;
-  bottom:90px;
-  border: 0;
-  background-color: #002080;
-  color:#ffffff;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    border: 0;
+    background-color: #002080;
+    color: #ffffff;
 }
 
 .btn-first:hover {
-  color:#ffffff;
-  background:#ff0000;
+    color: #ffffff;
+    background: #ff0000;
 }
 
 
@@ -131,10 +131,58 @@ button.btn.btn-danger {
 
 #main-footer {
     background-color: #000000;
+   }
+   
+.footer-container {
+    height:130px;
+    bottom: 0;
+}   
+
+/* Social Media Icons*/
+
+.list-items {
+
+    color: #002080;
+}
+
+
+
+.social-media-links {
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 1em;
 
 }
 
 
+.social-media-links a i {
+
+    color: #002080;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-media-links a i:hover {
+    color: #ff0000;
+}
+
+/*About*/
+
+.about {
+    font-family:'Roboto', sans-serif;
+    font-size:1em;
+    color:#ffffff;
+    padding-left: 2em;
+   
+}
+
+.about a {
+    text-decoration: none;
+}
 
 /*Media Queries*/
 
@@ -155,3 +203,9 @@ button.btn.btn-danger {
 
 }
 
+@media(min-width:768px) {
+    .back-to-top {
+        bottom:190px;
+        right: 40px;
+    }
+}

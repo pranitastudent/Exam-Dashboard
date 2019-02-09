@@ -22,7 +22,7 @@ $('.cf a').on('click', function(event) {
 
 $(document).ready(function() {
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 150) {
+        if ($(this).scrollTop() > 850) {
             $("#back-to-top").fadeIn();
         
         }
