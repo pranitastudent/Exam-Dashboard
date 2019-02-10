@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav navbar-right cf">
 
-                    <li class="active" "nav-title"><a href="#genderbar">Gender Balance Examination</a></li>
+                    <li class="active"><a href="#genderbar">Gender Balance Examination</a></li>
                     <li class="nav-title"><a href="#subject">Subject Specific Examination</a></li>
                     <li class="nav-title"><a href="#ethnic">Ethnicity and Parental Education</a></li>
                     <li class="nav-title"><a href="#correlation">Subject Correlation</a></li>
@@ -75,8 +75,8 @@
 
                         </div>
                         <div class="col-xs-12 col-sm-6 text-center">
-                            <p class="gender-paragraph"><span id="female-number"></span> 518 students in the study are female.</p>
-                            <p class="gender-paragraph"><span id="male-number"></span> 482 students in the study are male.</p>
+                            <p class="gender-paragraph"><span id="female-number"><i class="fa fa-female fa-gender" aria-hidden="true"></i></span> 518 students in the study are female.</p>
+                            <p class="gender-paragraph"><span id="male-number"><i class="fa fa-male fa-gender" aria-hidden="true"></i> </span> 482 students in the study are male.</p>
                             <p class="gender-paragraph">We can see that there is an almost 50/50 split betweeen the genders in our examination study with a total number of 1000 students.</p>
                         </div>
                         <div class="col-xs-12 col-sm-6 text-center" id="gender-balance" class="custom-chart"></div>
@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12">
                             <p class="section-paragraph"><strong>Data Analysis reveals that roughly males and females perfoming equally in Math at first galance but there is a marginal difference with males outperforming females (likely to be due to the more females than males in the study).
-                                Females outperform Males in both reading and writing.</strong></h2>
+                                Females outperform Males in both reading and writing.</strong>
                         </div>
                     </div>
                 </div>
@@ -137,13 +137,13 @@
                             <h2 class="section-heading">Ethnicity and Parental Education Examination</h2>
                             <p class="section-paragraph">Select a level of education to compare against the five ethnic groups in this study:</p>
                         </div>
-                        <div>
+                        </div>
                             <div class="col-xs-12 text-center" id="race_ethnicity-graph" class="custom chart"></div>
+                            <div id="parental_level_of_education-selector"></div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 text-center">
-                            <div id="parental_level_of_education-selector"></div>
-                            <p class="section-paragraph col-xs-12"><strong>From examination the various degree levels against ethnicity its appear Group D have the highest number of parents educated to masters degree level. Group A and E have the lowest educated degrees across parental level. Overall
+                             <p class="section-paragraph col-xs-12"><strong>From examination the various degree levels against ethnicity its appear Group D have the highest number of parents educated to masters degree level. Group A and E have the lowest educated degrees across parental level. Overall
                               Group C appears to have the best educated parents across all degrees.</strong></p>
                         </div>
             </section>
@@ -180,7 +180,6 @@
             <!-- Test prep: completed vs not completed - Line graphs -->
             <section id="preparation" class="section">
                 <div class="container">
-
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 text-center">
                             <h2 class="section-heading">Did students who completed the test preparation course gain more marks on avarage in each subject?</h2>
@@ -219,10 +218,11 @@
                         <li class="social"><a target="_blank" href="https://www.youtube.com/watch?v=m2DfpM6MyB8"><i class="fa fa-youtube-square"></i></a></li>
                     </ul>
                 </div>
-                <div class = "row">
-                <div class="col-xs-12 col-sm-12">
-                    <p class="about"><strong>Data sourced from <a href="https://www.kaggle.com/spscientist/students-performance-in-exams" target="_blank"></strong><strong>Kaggle</strong></a>.</p>
-                    <h5 class="about"><strong>Data dashboard created by Pranita Gandhi</strong></h5>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <p class="about"><strong>Data sourced from <a href="https://www.kaggle.com/spscientist/students-performance-in-exams" target="_blank">Kaggle</strong></a></p>
+                        <h5 class="about"><strong>Data dashboard created by Pranita Gandhi</strong></h5>
+                    </div>
                 </div>
                 </div>
         </footer>
@@ -236,7 +236,6 @@
 
         <!--Own JS-->
         <script type="text/javascript" src="static/js/main.js"></script>
-
 
 
 </body>

@@ -1,13 +1,13 @@
-
 queue()
     .defer(d3.csv, "data/StudentsPerformance.csv")
     .await(makeGraphs);
 
-     sd = [];
+sd = [];
 
 function makeGraphs(error, studentData) {
     const ndx = crossfilter(studentData);
-    
+
+/*Global object for reset button*/
     sd = studentData;
 
     /*To change these strings to integer values*/
@@ -39,68 +39,18 @@ function reset() {
     makeGraphs(null, sd);
 }
 
-
-/*Number displays*/
-function show_percent_of_each_gender(ndx) {
-
-    function percentageThatAreEachGender(gender) {
-        return genderDim.groupAll().reduce(
-            function(p, v) {
-                p.total++;
-                if (v.gender === gender) {
-                    p.count++;
-                }
-                return p;
-            },
-            function(p, v) {
-                p.total++;
-                if (v.gender === gender) {
-                    p.count--;
-                }
-                return p;
-            },
-            function() {
-                return { count: 0, total: 0 };
-            }
-        );
-    }
-
-    const genderDim = ndx.dimension(dc.pluck("gender"));
-    const percentageThatAreFemale = percentageThatAreEachGender("female");
-    const percentgeThatAreMale = percentageThatAreEachGender("male");
-
-    dc.numberDisplay("#female-number")
-        .group(percentageThatAreFemale)    
-        .formatNumber(d3.format(".1%"))
-        .valueAccessor(function(d) {
-            if(d.total > 0) {
-                return (d.count / d.total)
-            } else {
-                return 0;
-            }
-            return d.percent;
-        })
+const genderDim = ndx.dimension(dc.pluck("gender"));
+const percentageThatAreFemale = percentageThatAreEachGender("female");
+const percentgeThatAreMale = percentageThatAreEachGender("male");
 
 
-    dc.numberDisplay("#male-number")
-        .formatNumber(d3.format(".1%"))
-        .valueAccessor(function(d) {
-            if(d.total > 0) {
-                return (d.count / d.total)
-            } else {
-                return 0;
-            }
-            return d.percent * 100;
-        })
-        .group(percentgeThatAreMale);
-}
 
 /*Gender Balance Chart*/
 
 function show_gender_balance(ndx) {
     const genderColors = d3.scale.ordinal()
-        .domain(['Female', 'Male'])
-        .range(['red', 'blue']);
+        .domain(["Female", "Male"])
+        .range(["red", "blue"]);
     const genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
@@ -128,8 +78,8 @@ function show_gender_balance(ndx) {
 
 function show_test_scores_by_gender(ndx) {
     const genderColors = d3.scale.ordinal()
-        .domain(['Female', 'Male'])
-        .range(['blue', 'red']);
+        .domain(["Female", 'Male'])
+        .range(["blue", "red"]);
     const genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
@@ -141,7 +91,6 @@ function show_test_scores_by_gender(ndx) {
         .height(200)
         .radius(90)
         .transitionDuration(500)
-
         .colors(genderColors)
         .dimension(genderDim)
         .group(math_score_by_gender)
@@ -181,7 +130,7 @@ function show_parental_level_of_education_selector(ndx) {
 /*Race and Ethnicity Bar chart*/
 function show_race_ethnicity_balance(ndx) {
     let raceColors = d3.scale.ordinal()
-        .domain([ 'A', 'B', 'C', 'D', 'E'])
+        .domain(['A', 'B', 'C', 'D', 'E'])
         .range(['pink', 'yellow', 'orange', 'green', 'blue']);
     let race_ethnicityDim = ndx.dimension(function(d) {
         return [d.race_ethnicity];

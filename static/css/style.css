@@ -23,7 +23,6 @@ body {
     color: #000000;
 }
 
-
 /*Graphs*/
 
 /*Images*/
@@ -81,8 +80,12 @@ button.btn.btn-danger {
     background: #ff0000;
 }
 
+/*Gender Icons*/
 
-
+.fa-gender {
+    font-size:2.0em;
+    letter-spacing: 1em;
+}    
 
 /*Paragraphs*/
 
@@ -124,7 +127,8 @@ button.btn.btn-danger {
 }
 
 #parental_level_of_education-selector {
-    display: flex;
+   text-align: center;
+    
 }
 
 /*Footer*/

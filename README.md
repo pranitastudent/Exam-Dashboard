@@ -111,9 +111,7 @@ The basic design for Dashboard Data project was taken from The Code Institute's 
 ## Media
 
 
-### Logo and Background Image
-
-The Logo was taken from [Open Clip Art- Good Grade](https://openclipart.org/detail/191354/good-grade).
+###  Background Image
 
 The background image was taken from [Photo by Element5 Digital on Unsplash](https://unsplash.com/photos/OyCl7Y4y0Bk).
 
@@ -126,7 +124,7 @@ Image faded using [Fade-out Effect] (https://www.tuxpi.com/photo-effects/fade-im
 #### Dataset
 
 The dataset for this project was  fictious examination performance datset downloaded as a csv file from [Kaggle](https://www.kaggle.com/spscientist/students-performance-in-exams).
-Th dataset was created by the 'SP Scientist' and is 
+Th dataset was created by the 'SP Scientist' and is available on Kaggle.
 
 
 ## Acknowledgements
