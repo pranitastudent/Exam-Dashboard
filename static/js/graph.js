@@ -7,7 +7,7 @@ sd = [];
 function makeGraphs(error, studentData) {
     const ndx = crossfilter(studentData);
 
-/*Global object for reset button*/
+    /*Global object for reset button*/
     sd = studentData;
 
     /*To change these strings to integer values*/
@@ -39,22 +39,16 @@ function reset() {
     makeGraphs(null, sd);
 }
 
-const genderDim = ndx.dimension(dc.pluck("gender"));
-const percentageThatAreFemale = percentageThatAreEachGender("female");
-const percentgeThatAreMale = percentageThatAreEachGender("male");
-
-
-
 /*Gender Balance Chart*/
 
 function show_gender_balance(ndx) {
-    const genderColors = d3.scale.ordinal()
+    let genderColors = d3.scale.ordinal()
         .domain(["Female", "Male"])
         .range(["red", "blue"]);
-    const genderDim = ndx.dimension(function(d) {
+    let genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
-    const genderMix = genderDim.group();
+    let genderMix = genderDim.group();
 
     dc.barChart("#gender-balance")
         .width(350)
@@ -77,10 +71,10 @@ function show_gender_balance(ndx) {
 /*Subject specific pie charts for genders*/
 
 function show_test_scores_by_gender(ndx) {
-    const genderColors = d3.scale.ordinal()
+    let genderColors = d3.scale.ordinal()
         .domain(["Female", 'Male'])
         .range(["blue", "red"]);
-    const genderDim = ndx.dimension(function(d) {
+    let genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
     const math_score_by_gender = genderDim.group().reduceSum(dc.pluck('math_score'));
@@ -93,7 +87,7 @@ function show_test_scores_by_gender(ndx) {
         .transitionDuration(500)
         .colors(genderColors)
         .dimension(genderDim)
-        .group(math_score_by_gender)
+        .group(math_score_by_gender);
 
     dc.pieChart("#gender-balance-reading")
         .height(200)
@@ -155,18 +149,18 @@ function show_race_ethnicity_balance(ndx) {
 }
 /*Scatter plot for math vs reading scores*/
 function show_math_score_to_reading_score_correlation(ndx) {
-    const genderColors = d3.scale.ordinal()
+    let genderColors = d3.scale.ordinal()
         .domain(["Female", "Male"])
         .range(["red", "blue"]);
 
-    const mathDim = ndx.dimension(dc.pluck("math_score"));
-    const scoresDim = ndx.dimension(function(d) {
+    let mathDim = ndx.dimension(dc.pluck("math_score"));
+    let scoresDim = ndx.dimension(function(d) {
         return [d.math_score, d.reading_score, d.gender];
     });
-    const scoresGroup = scoresDim.group();
+    let scoresGroup = scoresDim.group();
 
-    const minMath = mathDim.bottom(1)[0].math_score;
-    const maxMath = mathDim.top(1)[0].math_score;
+    let minMath = mathDim.bottom(1)[0].math_score;
+    let maxMath = mathDim.top(1)[0].math_score;
 
     dc.scatterPlot("#math_vs_reading_scores")
         .width(450)
@@ -191,18 +185,18 @@ function show_math_score_to_reading_score_correlation(ndx) {
 
 /*Scatter plot for math vs writing scores*/
 function show_math_score_to_writing_score_correlation(ndx) {
-    const genderColors = d3.scale.ordinal()
+    let genderColors = d3.scale.ordinal()
         .domain(["Female", "Male"])
         .range(["red", "blue"]);
 
-    const mathDim = ndx.dimension(dc.pluck("math_score"));
-    const scoresDim = ndx.dimension(function(d) {
+    let mathDim = ndx.dimension(dc.pluck("math_score"));
+    let scoresDim = ndx.dimension(function(d) {
         return [d.math_score, d.writing_score, d.gender];
     });
     const scoresGroup = scoresDim.group();
 
-    const minMath = mathDim.bottom(1)[0].math_score;
-    const maxMath = mathDim.top(1)[0].math_score;
+    let minMath = mathDim.bottom(1)[0].math_score;
+    let maxMath = mathDim.top(1)[0].math_score;
 
     dc.scatterPlot("#math_vs_writing_scores")
         .width(450)
@@ -227,18 +221,18 @@ function show_math_score_to_writing_score_correlation(ndx) {
 
 /*Scatter plot for reading vs math scores*/
 function show_reading_score_to_writing_score_correlation(ndx) {
-    const genderColors = d3.scale.ordinal()
+    let genderColors = d3.scale.ordinal()
         .domain(["Female", "Male"])
         .range(["red", "blue"]);
 
-    const readingDim = ndx.dimension(dc.pluck("reading_score"));
-    const scoresDim = ndx.dimension(function(d) {
+    let readingDim = ndx.dimension(dc.pluck("reading_score"));
+    let scoresDim = ndx.dimension(function(d) {
         return [d.reading_score, d.writing_score, d.gender];
     });
     const scoresGroup = scoresDim.group();
 
-    const minReading = readingDim.bottom(1)[0].reading_score;
-    const maxReading = readingDim.top(1)[0].reading_score;
+    let minReading = readingDim.bottom(1)[0].reading_score;
+    let maxReading = readingDim.top(1)[0].reading_score;
 
     dc.scatterPlot("#reading_vs_writing_scores")
         .width(450)
