@@ -29,7 +29,7 @@ function makeGraphs(error, studentData) {
     show_math_scores_by_test_prep(ndx);
     show_reading_scores_by_test_prep(ndx);
     show_writing_scores_by_test_prep(ndx);
-   
+
 
 
 
@@ -73,12 +73,13 @@ function show_percent_of_each_gender(ndx) {
     const percentgeThatAreMale = percentageThatAreEachGender("male");
 
     dc.numberDisplay("#female-number")
-        .group(percentageThatAreFemale)    
+        .group(percentageThatAreFemale)
         .formatNumber(d3.format(".1%"))
         .valueAccessor(function(d) {
-            if(d.total > 0) {
+            if (d.total > 0) {
                 return (d.count / d.total);
-            } else {
+            }
+            else {
                 return 0;
             }
             return d.percent;
@@ -89,9 +90,10 @@ function show_percent_of_each_gender(ndx) {
         .group(percentgeThatAreMale)
         .formatNumber(d3.format(".1%"))
         .valueAccessor(function(d) {
-            if(d.total > 0) {
+            if (d.total > 0) {
                 return (d.count / d.total);
-            } else {
+            }
+            else {
                 return 0;
             }
             return d.percent * 100;
