@@ -18,6 +18,7 @@ function makeGraphs(error, studentData) {
     });
 
     /*Calling each chart function*/
+    show_percent_of_each_gender(ndx);
     show_gender_balance(ndx);
     show_test_scores_by_gender(ndx);
     show_parental_level_of_education_selector(ndx);
@@ -28,6 +29,7 @@ function makeGraphs(error, studentData) {
     show_math_scores_by_test_prep(ndx);
     show_reading_scores_by_test_prep(ndx);
     show_writing_scores_by_test_prep(ndx);
+   
 
 
 
@@ -39,16 +41,75 @@ function reset() {
     makeGraphs(null, sd);
 }
 
+
+
+/*Number displays*/
+function show_percent_of_each_gender(ndx) {
+
+    function percentageThatAreEachGender(gender) {
+        return genderDim.groupAll().reduce(
+            function(p, v) {
+                p.total++;
+                if (v.gender === gender) {
+                    p.count++;
+                }
+                return p;
+            },
+            function(p, v) {
+                p.total++;
+                if (v.gender === gender) {
+                    p.count--;
+                }
+                return p;
+            },
+            function() {
+                return { count: 0, total: 0 };
+            }
+        );
+    }
+
+    const genderDim = ndx.dimension(dc.pluck("gender"));
+    const percentageThatAreFemale = percentageThatAreEachGender("female");
+    const percentgeThatAreMale = percentageThatAreEachGender("male");
+
+    dc.numberDisplay("#female-number")
+        .group(percentageThatAreFemale)    
+        .formatNumber(d3.format(".1%"))
+        .valueAccessor(function(d) {
+            if(d.total > 0) {
+                return (d.count / d.total);
+            } else {
+                return 0;
+            }
+            return d.percent;
+        });
+
+
+    dc.numberDisplay("#male-number")
+        .group(percentgeThatAreMale)
+        .formatNumber(d3.format(".1%"))
+        .valueAccessor(function(d) {
+            if(d.total > 0) {
+                return (d.count / d.total);
+            } else {
+                return 0;
+            }
+            return d.percent * 100;
+        });
+}
+
+
+
 /*Gender Balance Chart*/
 
 function show_gender_balance(ndx) {
-    let genderColors = d3.scale.ordinal()
+    const genderColors = d3.scale.ordinal()
         .domain(["Female", "Male"])
         .range(["red", "blue"]);
-    let genderDim = ndx.dimension(function(d) {
+    const genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
-    let genderMix = genderDim.group();
+    const genderMix = genderDim.group();
 
     dc.barChart("#gender-balance")
         .width(350)
