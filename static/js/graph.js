@@ -82,7 +82,7 @@ function show_percent_of_each_gender(ndx) {
             else {
                 return 0;
             }
-            return d.percent;
+            return d.percent *100;
         });
 
 
@@ -96,7 +96,7 @@ function show_percent_of_each_gender(ndx) {
             else {
                 return 0;
             }
-            return d.percent * 100;
+            return d.percent;
         });
 }
 
@@ -105,10 +105,10 @@ function show_percent_of_each_gender(ndx) {
 /*Gender Balance Chart*/
 
 function show_gender_balance(ndx) {
-    const genderColors = d3.scale.ordinal()
+    let genderColors = d3.scale.ordinal()
         .domain(["Female", "Male"])
         .range(["red", "blue"]);
-    const genderDim = ndx.dimension(function(d) {
+    let genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
     const genderMix = genderDim.group();
@@ -135,8 +135,8 @@ function show_gender_balance(ndx) {
 
 function show_test_scores_by_gender(ndx) {
     let genderColors = d3.scale.ordinal()
-        .domain(["Female", 'Male'])
-        .range(["blue", "red"]);
+        .domain(['Female', 'Male'])
+        .range(['blue', 'red']);
     let genderDim = ndx.dimension(function(d) {
         return [d.gender];
     });
@@ -213,8 +213,8 @@ function show_race_ethnicity_balance(ndx) {
 /*Scatter plot for math vs reading scores*/
 function show_math_score_to_reading_score_correlation(ndx) {
     let genderColors = d3.scale.ordinal()
-        .domain(["Female", "Male"])
-        .range(["red", "blue"]);
+        .domain(['Female', 'Male'])
+        .range(['red', 'blue']);
 
     let mathDim = ndx.dimension(dc.pluck("math_score"));
     let scoresDim = ndx.dimension(function(d) {
@@ -232,8 +232,8 @@ function show_math_score_to_reading_score_correlation(ndx) {
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
-        .yAxisLabel("Reading Score")
-        .xAxisLabel("Math Score")
+        .yAxisLabel('Reading Score')
+        .xAxisLabel('Math Score')
         .title(function(d) {
             return "This " + d.key[2] + " received " + d.key[0] + " in Math and " + d.key[1] + " in Reading.";
         })
@@ -249,8 +249,8 @@ function show_math_score_to_reading_score_correlation(ndx) {
 /*Scatter plot for math vs writing scores*/
 function show_math_score_to_writing_score_correlation(ndx) {
     let genderColors = d3.scale.ordinal()
-        .domain(["Female", "Male"])
-        .range(["red", "blue"]);
+        .domain(['Female', 'Male'])
+        .range(['red', 'blue']);
 
     let mathDim = ndx.dimension(dc.pluck("math_score"));
     let scoresDim = ndx.dimension(function(d) {
@@ -268,8 +268,8 @@ function show_math_score_to_writing_score_correlation(ndx) {
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
-        .yAxisLabel("Writing Score")
-        .xAxisLabel("Math Score")
+        .yAxisLabel('Writing Score')
+        .xAxisLabel('Math Score')
         .title(function(d) {
             return "This " + d.key[2] + " received " + d.key[0] + " in Math and " + d.key[1] + " in Writing.";
         })
@@ -285,17 +285,17 @@ function show_math_score_to_writing_score_correlation(ndx) {
 /*Scatter plot for reading vs math scores*/
 function show_reading_score_to_writing_score_correlation(ndx) {
     let genderColors = d3.scale.ordinal()
-        .domain(["Female", "Male"])
-        .range(["red", "blue"]);
+        .domain(['Female', 'Male'])
+        .range(['red', 'blue']);
 
     let readingDim = ndx.dimension(dc.pluck("reading_score"));
     let scoresDim = ndx.dimension(function(d) {
         return [d.reading_score, d.writing_score, d.gender];
     });
-    const scoresGroup = scoresDim.group();
+    let scoresGroup = scoresDim.group();
 
-    let minReading = readingDim.bottom(1)[0].reading_score;
-    let maxReading = readingDim.top(1)[0].reading_score;
+    const minReading = readingDim.bottom(1)[0].reading_score;
+    const maxReading = readingDim.top(1)[0].reading_score;
 
     dc.scatterPlot("#reading_vs_writing_scores")
         .width(450)
@@ -304,8 +304,8 @@ function show_reading_score_to_writing_score_correlation(ndx) {
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
-        .yAxisLabel("Writing Score")
-        .xAxisLabel("Reading Score")
+        .yAxisLabel('Writing Score')
+        .xAxisLabel('Reading Score')
         .title(function(d) {
             return "This " + d.key[2] + " received " + d.key[0] + " in Reading and " + d.key[1] + " in Writing.";
         })
@@ -321,10 +321,10 @@ function show_reading_score_to_writing_score_correlation(ndx) {
 /*Line charts for text preparation vs average scores in each subject*/
 
 
-/*Line Graph for math scores by test prep*/
+/*Line Graph for math scores by test preparation*/
 function show_math_scores_by_test_prep(ndx) {
     const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
-    const math_by_test_prepGroup = testDim.group().reduce(
+    let math_by_test_prepGroup = testDim.group().reduce(
         function(p, v) {
             p.count++;
             p.total += v.math_score;
@@ -362,15 +362,15 @@ function show_math_scores_by_test_prep(ndx) {
             return d.value.average;
         })
         .elasticY(true)
-        .xAxisLabel("Test Prep Course")
-        .yAxisLabel("Average Math Score")
+        .xAxisLabel('Test Prep Course')
+        .yAxisLabel('Average Math Score')
         .yAxis().ticks(10)
 }
 
-/*Line Graph for reading scores by test prep*/
+/*Line Graph for reading scores by test preparation*/
 function show_reading_scores_by_test_prep(ndx) {
     const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
-    const reading_by_test_prepGroup = testDim.group().reduce(
+    let reading_by_test_prepGroup = testDim.group().reduce(
         function(p, v) {
             p.count++;
             p.total += v.reading_score;
@@ -407,15 +407,15 @@ function show_reading_scores_by_test_prep(ndx) {
             return d.value.average;
         })
         .elasticY(true)
-        .xAxisLabel("Test Prep Course")
-        .yAxisLabel("Average Reading Score")
+        .xAxisLabel('Test Prep Course')
+        .yAxisLabel('Average Reading Score')
         .yAxis().ticks(10);
 }
 
-/*Line Graph for writing scores by test prep*/
+/*Line Graph for writing scores by test preparation*/
 function show_writing_scores_by_test_prep(ndx) {
     const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
-    const writing_by_test_prepGroup = testDim.group().reduce(
+    let writing_by_test_prepGroup = testDim.group().reduce(
         function(p, v) {
             p.count++;
             p.total += v.writing_score;
@@ -452,7 +452,7 @@ function show_writing_scores_by_test_prep(ndx) {
             return d.value.average;
         })
         .elasticY(true)
-        .xAxisLabel("Test Prep Course")
-        .yAxisLabel("Average Writing Score")
+        .xAxisLabel('Test Prep Course')
+        .yAxisLabel('Average Writing Score')
         .yAxis().ticks(10);
 }
