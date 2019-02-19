@@ -24,7 +24,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 850) {
             $("#back-to-top").fadeIn();
-        
+
         }
         else {
             $("#back-to-top").fadeOut();
@@ -32,7 +32,6 @@ $(document).ready(function() {
     });
     // scroll body to 0px on click
     $("#back-to-top").click(function() {
-        $("#back-to-top").tooltip("hide");
         $("body,html").animate({
                 scrollTop: 0
             },
