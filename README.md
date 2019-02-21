@@ -35,7 +35,7 @@ The 'up' button allows the user to navigate back to the start of the webpage.
 <ol>
 <li> A bar chart depicting the number of female and male students will be produced and the user is able to select each gender through clicking on each bar representing the gender.<li>
 <li> Three pie charts will be produced to examine scores in Maths, Reading and Writing according to gender and hence named 'Gender Balance Examination'.</li>
-<li> The ethnicity and parental education relationship examination will be depicted through a barchart. In order for equality and diversity the ethnic group are anomolysed and labelled group A-D. The parental level of education per ethnicity can be visualised through selecting each level of education using the selector.</li>
+<li> The ethnicity and parental education relationship examination will be depicted through a barchart. In order for equality and diversity the ethnic groups (A,B,C,D,E) are anomolysed and labelled group A-D. The parental level of education per ethnicity can be visualised through selecting each level of education using the selector.</li>
 <li> The chart for Maths Vs Writing, Reading Vs Writing and Maths Vs Reading will be in the form of a scatter graph where each set of results can ve visualised through clicking on the data points for each subject and these are rendered according to gender selection.</li>
 <li> The chart for test preparation will be in the form of a line chart where test preparation against maths, reading and writing scores will be visualised through three line graphs.</li>
 </ol>
