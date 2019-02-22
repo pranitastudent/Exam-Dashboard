@@ -21,11 +21,11 @@ The website aims to inform users of the trends between gender, ethnic race, pare
 ## Wireframes
 
 My wireframes for the project were created using Justinmind Prototyper 8.6.1. The wireframes are saved as a pdf file. Each wireframe contains three mock-ups which include; desktops and for responsive design for tablets and mobiles.
-<ul>
-<li>[Desktop Wireframe](wireframes/desktop.png)</li>
-<li>[Tablet Wireframe](wireframes/Tablet.png)</li>
-<li>[Mobile Wireframe](wireframes/Mobile.png)</li>
-</ul>
+
+[Desktop Wireframe](wireframes/desktop.png)<br>
+[Tablet Wireframe](wireframes/Tablet.png)<br>
+[Mobile Wireframe](wireframes/Mobile.png)
+
 
 The final project differs from the wireframes as each chart contains a conclusion depicting findings in order for the user to clearly conclude what each chart shows. The stacked bar chart has been omitted for ethnicity and parental education as it doesn't provide any more data which can be concluded. The Reset button has been placed at the top
 in the final website in order for the user to easily reset the graphs once the 'back-to-top' button is clicked.
@@ -55,14 +55,14 @@ The 'up' button allows the user to navigate back to the start of the webpage.
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> HTML5 </a></li> HTML 5 was used to create the structure of webpage with the necessary elements.
 <li><a href="https://www.w3.org/Style/CSS/Overview.en.html"> CSS3 </a></li> CSS3 was used to write custom css style the webpage with the necessay attributes.
-<li><a href ="https://www.javascript.com/"></a></li> Javascript is used to declare variables and functions.
+<li><a href ="https://www.javascript.com/">JavaScript</a></li> Javascript is used to declare variables and functions.
 <li><a href="https://getbootstrap.com/"> Bootstrap v3.3.7 </a> </li>  The Bootstrap framework is used to style the webpage alongside custom css and the grid system is adhered to.
-<li><a href="https://jquery.com/"> Jquery </a> </li> Jquery was used to create the collapsible navbar in toggle mode for mobile devices and for smooth scroll of the website.
+<li><a href="https://jquery.com/"> Jquery </a></li> Jquery was used to create the collapsible navbar in toggle mode for mobile devices and for smooth scroll of the website.
 <li> <a href ="https://jasmine.github.io/">Jasmine 2.7.0</a></li> Jasmine was used to carryout tests on JavaScript code.
-<li> <a href = "https://git-scm.com/"></a>Git</li> Git was used to push the files to the local repository. 
-<li><a href="https://d3js.org/"></a>D3<li>D3 library was used to produce the charts.
-<li><a href="https://dc-js.github.io/dc.js/"></a>dc</li>dc library was used to produce charts.
-<li><a href ="http://square.github.io/crossfilter/"></a>Crossfilter library used to produce interactive charts.
+<li> <a href = "https://git-scm.com/">Git</a></li> Git was used to push the files to the local repository. 
+<li><a href="https://d3js.org/">D3</a><li>D3 library was used to produce the charts.
+<li><a href="https://dc-js.github.io/dc.js/">dc</a></li>dc library was used to produce charts.
+<li><a href ="http://square.github.io/crossfilter/">crossfilter</a></li>crossfilter library used to produce interactive charts.
 </ul>
 
 ## Framework 
