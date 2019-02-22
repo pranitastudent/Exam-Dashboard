@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500');
-
 html,
 body {
     width: 100%;
@@ -8,8 +7,6 @@ body {
     padding: 0px;
     overflow-x: hidden;
 }
-
-
 
 /*Headings*/
 
@@ -23,6 +20,9 @@ body {
     color: #000000;
 }
 
+.text-dy {
+    font-size:1em;
+}
 
 /*Images*/
 
@@ -41,7 +41,6 @@ body {
     -o-background-size: cover;
 }
 
-
 /*Reset button*/
 
 button.btn.btn-danger.top-btn {
@@ -53,14 +52,11 @@ button.btn.btn-danger.top-btn {
 
 button.btn.btn-danger.top-btn:hover {
     border-color: #ffffff;
-
 }
 
 button.btn.btn-danger {
     background-color: #ff3333;
-
 }
-
 
 /* Back to the top button*/
 
@@ -82,9 +78,9 @@ button.btn.btn-danger {
 /*Gender Icons*/
 
 .fa-gender {
-    font-size:2.0em;
+    font-size: 2.0em;
     letter-spacing: 1em;
-}    
+}
 
 /*Paragraphs*/
 
@@ -104,8 +100,6 @@ button.btn.btn-danger {
     font-weight: 400;
 }
 
-
-
 /*Navigation bar*/
 
 .navbar-inverse .navbar-brand {
@@ -118,48 +112,39 @@ button.btn.btn-danger {
     margin: 0;
 }
 
-
 .nav-title {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-
 }
 
 #parental_level_of_education-selector {
-   text-align: center;
-    
+    text-align: center;
 }
 
 /*Footer*/
 
 #main-footer {
     background-color: #000000;
-   }
-   
+}
+
 .footer-container {
-    height:130px;
+    height: 130px;
     bottom: 0;
-}   
+}
 
 /* Social Media Icons*/
 
 .list-items {
-
     color: #3366ff;
 }
-
-
 
 .social-media-links {
     font-size: 2.5em;
     text-align: center;
     padding-top: 1em;
-
 }
 
-
 .social-media-links a i {
-
     color: #3366ff;
     display: inline-block;
     text-align: center;
@@ -176,11 +161,10 @@ button.btn.btn-danger {
 /*About*/
 
 .about {
-    font-family:'Roboto', sans-serif;
-    font-size:1em;
-    color:#ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #ffffff;
     padding-left: 2em;
-   
 }
 
 .about a {
@@ -194,21 +178,18 @@ button.btn.btn-danger {
         margin-bottom: 20px;
         padding: 0px 10px;
         line-height: 1.2em;
-
     }
 }
-
 
 @media(min-width:768px) {
     .pie-heading {
         padding-right: 7.5em;
     }
-
 }
 
 @media(min-width:768px) {
     .back-to-top {
-        bottom:190px;
+        bottom: 190px;
         right: 40px;
     }
 }

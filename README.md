@@ -100,6 +100,11 @@ The website was tested on the following devices and the website was found to dis
 
 The graphs rendered well on all browsers: Mozilla Firefox, Google Chrome, Opera and Microsoft Edge. 
 
+## JavaScript Testing
+
+In order to test the javascript , a test.js files was created so that Jasmine testing could take place. Test.Js is adaptation of 'Jasmine Challenges Drinks Game'whereby an age is inputted and the user gets a statement shown according to the age input. Each of the if and else if statements were tested
+and all passed the jasmine tests.
+
 ## Testing User Stories
 
 A potential user/user who  wishes to examine correlations between genders and subject specific scores, parental level of education and ethnicity as well as test preparation and scores in each subject. The data dashboard allows correlation to be seen between gender and test results, parental level of education acorrding to ethnicity, whether consistent performance exists throughout subjects based on results and a correlation between test preparation and scores. The user is able to conclude whether correlation exists between these data series across the testing areas of ; maths, reading and writing.
@@ -136,6 +141,6 @@ Th dataset was created by the 'SP Scientist' and is available on Kaggle.
 
 ## Acknowledgements
 
-I would like to thank the The Code Institute for teaching me how to code using; HTML5, CSS3, D3, dc, crossfilter and introduction to the Bootstrap Framework.
+I would like to thank the The Code Institute for teaching me how to code using; HTML5, CSS3, D3, dc, crossfilter and introduction to the Bootstrap Framework. I would also like ot thank my mentor Rick Gallegos for his suggestions.
 
 I received inspiration from this project through being a current educationalist who has  an interest possible correlations that may exists between ; genders, ethnicty, parental level of education  and whether test preparation impacts examination performance.                                           
