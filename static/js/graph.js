@@ -7,11 +7,16 @@ queue()
 function makeGraphs(error, studentData) {
     const ndx = crossfilter(studentData);
 
-    /* sd variable for  reset button*/
+
+    /* Reset button*/
     sd = studentData;
-  
-  
+    function reset() {
+        makeGraphs(null, sd);
+    }
+
+
     /*To change these strings to integer values*/
+
     studentData.forEach(function(d) {
         d.math_score = parseInt(d.math_score);
         d.reading_score = parseInt(d["reading_score"]);
@@ -41,8 +46,6 @@ function makeGraphs(error, studentData) {
 function reset() {
     makeGraphs(null, sd);
 }
-
-
 
 /*Number displays*/
 

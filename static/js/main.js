@@ -9,7 +9,7 @@ $('.cf a').on('click', function(event) {
         $('html, body').animate({
                 scrollTop: $(hash).offset().top
             },
-            400,
+            200,
             function() {
                 window.location.hash = hash;
             }
@@ -35,7 +35,7 @@ $(document).ready(function() {
         $("body,html").animate({
                 scrollTop: 0
             },
-            400
+            200
         );
         return false;
     });
