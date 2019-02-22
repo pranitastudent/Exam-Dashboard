@@ -27,6 +27,9 @@ My wireframes for the project were created using Justinmind Prototyper 8.6.1. Th
 <li>[Mobile Wireframe](wireframes/mobile.png)</li>
 <ul>
 
+The final project differs from the wireframes as each chart contains a conclusion depicting findings in order for the user ot clearly understand what each chart shows. The stacked bar chart has been omitted as it doesb't provide anymore more conclusions betweenb ethnicty and parental education. The Reset button has been placed at the top
+in the final website in order for the user to easily reset the graphs once the 'back-to-top' button is clicked.
+
 
 ## Features
 The website is a single page website which contains a navigation bar to navigation users to; gender balance examination score chart, ethnicity and parental education chart, subject specific charts and test preparation charts. At the end of the website there is a reset which can be clicked to reset all the charts. The raw dataset is a csv file in MS Excel.
@@ -102,8 +105,8 @@ The graphs rendered well on all browsers: Mozilla Firefox, Google Chrome, Opera 
 
 ## JavaScript Testing
 
-In order to test the javascript , a test.js files was created so that Jasmine testing could take place. Test.Js is adaptation of 'Jasmine Challenges Drinks Game'whereby an age is inputted and the user gets a statement shown according to the age input. Each of the if and else if statements were tested
-and all passed the jasmine tests.
+In order to test the javascript , a [test.js](https://github.com/pranitastudent/Milestone-Second/blob/master/static/js/test.js) was created so that Jasmine testing could take place. Test.Js is adaptation of 'Jasmine Challenges Drinks Game'whereby an age is inputted and the user gets a statement shown according to the age input. Each of the if and else if statements were tested
+and all passed the jasmine tests in [testSpec.js](https://github.com/pranitastudent/Milestone-Second/blob/master/static/js/testSpec.js).
 
 ## Testing User Stories
 
