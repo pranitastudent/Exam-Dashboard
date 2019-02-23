@@ -92,15 +92,15 @@ button.btn.btn-danger {
 #gender-balance-writing text,
 #math-test-prep-chart text,
 #reading-test-prep-chart text,
-#writing-test-prep-chart text {
+#writing-test-prep-chart text,
+#math_vs_reading_scores text,
+#math_vs_writing_scores text,
+#reading_vs_writing_scores text {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
 }
 
-#race_ethnicity-graph text,
-#math_vs_reading_scores text,
-#math_vs_writing_scores text,
-#reading_vs_writing_scores text {
+#race_ethnicity-graph text {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
 }
@@ -153,7 +153,8 @@ button.btn.btn-danger {
 }
 
 .footer-container {
-    height: 120px;
+    margin:0;
+    padding:0;
     bottom: 0;
 }
 

@@ -1,4 +1,5 @@
-/*Navigation Links*/
+/*Navigation Links - The code below is adapted from the Traversy Media you tube video project :'myTunes Site',
+'Responsive Landing Page using HTML and CSS (A little jQuery - published on 19th August 2018)*/
 
 $('.cf a').on('click', function(event) {
     if (this.hash !== '') {
