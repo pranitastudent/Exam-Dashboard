@@ -16,19 +16,13 @@
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
-    <!--d3/crossfilter/dc/queue and own graph js sheets-->
-    <script src="static/js/d3.min.js"></script>
-    <script src="static/js/crossfilter.min.js"></script>
-    <script src="static/js/dc.min.js"></script>
-    <script src="static/js/queue.min.js"></script>
-    <script src="static/js/graph.js"></script>
-
+    
 </head>
 
 <body>
 
     <!-- Main Image and Navbar-->
-    <nav class="navbar navbar-inverse cf">
+    <nav class="navbar navbar-fixed-top navbar-inverse cf">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
@@ -37,12 +31,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><strong>Exam Performance Data Dashboard</strong></a>
+                <a class="navbar-brand" href="#genderbar"><strong>Exam Performance Data Dashboard</strong></a>
+                <!--Reset Button-->
+                <div class="col-xs-1 col-md-1 col-sm-1">
+                <button class="btn btn-danger reset" id="resetButton">Reset All</button>
             </div>
+            </div>
+             
+
+           
+           
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav navbar-right cf">
-
-                    <li class="active"><a href="#genderbar">Gender Balance Examination</a></li>
+                    <li class="nav-title"><a href="#genderbar">Gender Balance Examination</a></li>
                     <li class="nav-title"><a href="#subject">Subject Specific Examination</a></li>
                     <li class="nav-title"><a href="#ethnic">Ethnicity and Parental Education</a></li>
                     <li class="nav-title"><a href="#correlation">Subject Correlation</a></li>
@@ -61,13 +62,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 text-center">
-                            <h2 class="section-heading"><strong>Gender Balance Examination</strong></h2>
-
-                            <!--Reset Button-->
-
-                            <div class="col-xs-12 col-md-12">
-                                <button class="btn btn-danger top-btn" onClick="reset();">Reset All</button>
-                            </div>
+                            <h2 class="section-heading"><strong>Gender Balance Examination</strong></h2>                          
 
                         </div>
                         <div class="col-xs-12 col-sm-6 text-center">
@@ -203,7 +198,7 @@
             <div id="main-footer" class="row">
                 <div class="col-xs-12 col-sm-12">
                     <ul class="list-inline social-media-links">
-                        <h3 id="media-heading">FOLLOW US ON SOCIAL MEDIA</h3>
+                        <h4 id="media-heading">FOLLOW US ON SOCIAL MEDIA</h4>
                         <li class="social"><a target="_blank" href="https://www.facebook.com/kaggle/"><i class="fa fa-facebook"></i></a></li>
                         <li class="social"><a target="_blank" href="https://twitter.com/kaggle?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter-square"></i></a></li>
                         <li class="social"><a target="_blank" href="https://www.youtube.com/watch?v=m2DfpM6MyB8"><i class="fa fa-youtube-square"></i></a></li>
@@ -222,6 +217,13 @@
     <!--JQuery for drop down navigation bar-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!--d3/crossfilter/dc/queue and own graph js sheets-->
+    <script src="static/js/d3.min.js"></script>
+    <script src="static/js/crossfilter.min.js"></script>
+    <script src="static/js/dc.min.js"></script>
+    <script src="static/js/queue.min.js"></script>
+    <script src="static/js/graph.js"></script>
 
     <!--Own JS-->
     <script src="static/js/main.js"></script>
