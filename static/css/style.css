@@ -3,9 +3,17 @@ html,
 body {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
 }
 
 /*Headings*/
@@ -45,14 +53,14 @@ body {
 
 /*Reset button*/
 
-button.btn.btn-danger.top-btn {
+button.btn.btn-danger.reset {
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all .5s ease-in-out;
 }
 
-button.btn.btn-danger.top-btn:hover {
+button.btn.btn-danger.reset:hover {
     border-color: #ffffff;
 }
 
@@ -60,21 +68,26 @@ button.btn.btn-danger {
     background-color: #ff3333;
 }
 
+.reset {
+    margin: 1em 0 1em 0;
+}
+
+
 /* Back to the top button*/
 
 .back-to-top {
     cursor: pointer;
     position: fixed;
-    right: 20px;
-    bottom: 250px;
+    right: 1.5rem;
+    bottom: 15.6rem;
     border: 0;
-    background-color: #002080;
+    background-color: rgba(0,0,255,0.3);
     color: #ffffff;
 }
 
 .btn-first:hover {
     color: #ffffff;
-    background: #ff0000;
+    background: rgba(255,0,0,0.3);
 }
 
 /*Gender Icons*/
@@ -137,6 +150,10 @@ button.btn.btn-danger {
     margin: 0;
 }
 
+.cf {
+    padding-right:2rem;
+}
+
 .nav-title {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
@@ -150,6 +167,7 @@ button.btn.btn-danger {
 
 #main-footer {
     background-color: #000000;
+   
 }
 
 .footer-container {
@@ -165,7 +183,7 @@ button.btn.btn-danger {
 }
 
 .social-media-links {
-    font-size: 2.5em;
+    font-size: 2.0em;
     text-align: center;
     padding-top: 1em;
 }
@@ -201,7 +219,7 @@ button.btn.btn-danger {
 
 @media(max-width:767px) {
     .navbar-inverse .navbar-brand {
-        margin-bottom: 20px;
+        margin-bottom: 1.2rem;
         padding: 0px 10px;
         line-height: 1.2em;
     }
@@ -215,7 +233,7 @@ button.btn.btn-danger {
 
 @media(min-width:768px) {
     .back-to-top {
-        bottom: 216px;
-        right: 40px;
+        bottom: 13.5rem;
+        right: 2.5rem;
     }
 }
