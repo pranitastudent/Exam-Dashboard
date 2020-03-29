@@ -9,13 +9,16 @@ function makeGraphs(error, studentData) {
 	const ndx = crossfilter(studentData);
 
 
-	/* Reset button which resets data once button is clicked on*/
-	sd = studentData;
+/* Reset button which resets data once button is clicked on*/
+	
+     d3.select('#resetButton')
+    .on('click', function() {
+      dc.filterAll();
+  	dc.redrawAll();
 
-	function reset() {
-		makeGraphs(null, sd);
-	}
-
+      dc.filterAll();
+      dc.redrawAll();
+    });
 
 	/*To change these strings to integer values*/
 
@@ -230,7 +233,9 @@ function show_race_ethnicity_balance(ndx) {
 		.yAxisLabel("Parental Numbers")
 		.yAxis().ticks(10);
 }
+
 /*Scatter plot for math vs reading scores*/
+
 function show_math_score_to_reading_score_correlation(ndx) {
 	const genderColors = d3.scale.ordinal()
 		.domain(['Female', 'Male'])
@@ -272,6 +277,7 @@ function show_math_score_to_reading_score_correlation(ndx) {
 }
 
 /*Scatter plot for math vs writing scores*/
+
 function show_math_score_to_writing_score_correlation(ndx) {
 	const genderColors = d3.scale.ordinal()
 		.domain(['Female', 'Male'])
@@ -313,6 +319,7 @@ function show_math_score_to_writing_score_correlation(ndx) {
 }
 
 /*Scatter plot for reading vs math scores*/
+
 function show_reading_score_to_writing_score_correlation(ndx) {
 	const genderColors = d3.scale.ordinal()
 		.domain(['Female', 'Male'])
@@ -357,6 +364,7 @@ function show_reading_score_to_writing_score_correlation(ndx) {
 
 
 /*Line Graph for math scores by test preparation*/
+
 function show_math_scores_by_test_prep(ndx) {
 	const testDim = ndx.dimension(dc.pluck("test_preparation_course"));
 	let math_by_test_prepGroup = testDim.group().reduce(
@@ -515,5 +523,6 @@ function show_writing_scores_by_test_prep(ndx) {
 		.yAxisLabel('Average Writing Score')
 		.yAxis().ticks(10);
 }
+
 
 
