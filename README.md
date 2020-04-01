@@ -1,4 +1,4 @@
-[Deployed Website](https://pranitastudent.github.io/Milestone-Second/)
+[Deployed Website](https://pranitastudent.github.io/Exam-Dashboard/)
 
 # Data Dashboard- Examination Performance - Second Milestone Project
 The aim of the 'Interactive Frontend Development' end of module project was to create an interactive data dashboard on a dataset of choice using D3/dc and crossfilter libraries. The website should reflect all of the skills gained in; HTML,CSS, JavaScript/JQuery and use of D3,dc and crossfilter libraries. The website is a showcase of a fictious dataset examining student exam performance based on; gender, ethnic race, parental level of education, test preparation and scores in ; Maths, Reading and Writing.
